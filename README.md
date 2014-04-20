@@ -1,6 +1,6 @@
-# RateLimiter
+# rate_limiter
 
-TODO: Write a gem description
+This library allows you to rate-limit resource access.
 
 ## Installation
 
