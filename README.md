@@ -22,7 +22,7 @@ Or install it yourself as:
 require 'rate_limiter'
 
 include RateLimiter
-limiter = TimedLimiter.new(period: 10, rate: 20) # limit resource to 20 requests over 10 seconds
+limiter = TimedLimiter.new('my_resource', period: 10, rate: 20) # limit resource to 20 requests over 10 seconds
 executed = limiter.limit do
   # request some resource
 end
