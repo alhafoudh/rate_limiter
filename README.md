@@ -23,6 +23,7 @@ require 'rate_limiter'
 
 include RateLimiter
 limiter = TimedLimiter.new('my_resource', period: 10, rate: 20) # limit resource to 20 requests over 10 seconds
+
 executed = limiter.limit do
   # request some resource
 end
@@ -32,6 +33,11 @@ if executed
 else
   # block was not executed due to rate limiting
 end
+
+limiter.exceeded?
+
+limiter.increment!
+
 ```
 
 ## Contributing
