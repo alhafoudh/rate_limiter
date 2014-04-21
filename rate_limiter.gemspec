@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = RateLimiter::VERSION
   spec.authors       = ["Ahmed Al Hafoudh"]
   spec.email         = ["alhafoudh@freevision.sk"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{This library allows you to rate-limit resource access.}
+  spec.description   = %q{This library allows you to rate-limit resource access using counters implemented in Redis.}
+  spec.homepage      = "https://github.com/alhafoudh/rate_limiter"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -18,7 +18,6 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "hiredis", "~> 0.4.0"
   spec.add_dependency "redis", ">= 2.2.0"
 
   spec.add_development_dependency "bundler", "~> 1.5"
