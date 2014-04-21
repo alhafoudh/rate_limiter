@@ -1,6 +1,6 @@
-# RateLimiter
+# rate_limiter
 
-TODO: Write a gem description
+This library allows you to rate-limit resource access.
 
 ## Installation
 
@@ -18,11 +18,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'rate_limiter'
+
+include RateLimiter
+limiter = TimedLimiter.new('my_resource', period: 10, rate: 20) # limit resource to 20 requests over 10 seconds
+executed = limiter.limit do
+  # request some resource
+end
+
+if executed
+  # block was executed
+else
+  # block was not executed due to rate limiting
+end
+```
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/rate_limiter/fork )
+1. Fork it ( https://github.com/alhafoudh/rate_limiter/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

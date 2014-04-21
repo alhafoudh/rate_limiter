@@ -2,10 +2,6 @@ require 'spec_helper'
 
 describe RateLimiter do
   it 'should have a version number' do
-    RateLimiter::VERSION.should_not be_nil
-  end
-
-  it 'should do something useful' do
-    false.should be_true
+    expect(RateLimiter::VERSION).not_to be_nil
   end
 end
